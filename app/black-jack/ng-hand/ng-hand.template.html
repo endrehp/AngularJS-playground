@@ -1,0 +1,13 @@
+
+
+<div class="hand-container">
+  <p>This is my hand</p>
+  <p>{{hei}}</p>
+
+  <p ng-repeat="card in $ctrl.hand.cards">
+    {{card.getCard()}}
+  </p>
+
+  <p>Value: {{$ctrl.hand.getHandValue()}}</p>
+
+</div>

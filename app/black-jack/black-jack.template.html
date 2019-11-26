@@ -1,0 +1,46 @@
+
+
+
+<ul>
+  <li ng-repeat="phone in $ctrl.phones">
+    <span>{{phone.name}}</span>
+    <p>{{phone.snippet}}</p>
+  </li>
+</ul>
+
+<button ng-click="$ctrl.startGame()">New game</button>
+
+
+
+<div class="player-container">
+    <p>Player name: {{$ctrl.player.name}}</p>
+    <p>Cash: {{$ctrl.player.cash}}</p>
+    <button ng-click="$ctrl.player.adjustCash(10)">Add $10 cash</button>
+    <p>Bet: {{$ctrl.player.bet}}</p>
+
+</div>
+
+<div class="bet-container">
+  <button ng-click="$ctrl.player.placeBet(5)">Bet 5</button>
+</div>
+
+<div ng-if="$ctrl.gameState" class="game-container" ng-init="showHand=true">
+
+    <div ng-if="showHand">
+        <ng-hand hand="$ctrl.player.hand"></ng-hand>
+      </div>
+
+      <div>
+        <button ng-click="$ctrl.player.hand.hit($ctrl.deck)">Hit</button>
+      </div>
+
+      <div>
+        <p>Result: {{$ctrl.result}}</p>
+      </div>
+  
+</div>
+
+<p>{{hei}}</p>
+
+
+

@@ -1,0 +1,17 @@
+body {
+  padding-top: 20px;
+}
+
+.game-container {
+  width: 70%;
+  border: solid black 2px;
+  margin: auto;
+}
+
+.player-container {
+  border: solid black 2px;
+}
+
+.hand-container {
+  border: solid black 2px;
+}
